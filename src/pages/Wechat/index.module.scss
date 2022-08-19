@@ -1,0 +1,94 @@
+@import "@scss/hairline.scss";
+
+.root {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 46px 0 50px 0;
+
+  :global {
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .chat-list {
+      height: 570px;
+      overflow-y: scroll;
+      padding: 15px 16px;
+    }
+
+    .chat-item {
+      display: flex;
+      margin-bottom: 12px;
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+      }
+
+      .message {
+        max-width: 254px;
+        padding: 12px 8px;
+        line-height: 1.4;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: #f7f8fa;
+      }
+    }
+
+    .user {
+      flex-direction: row-reverse;
+
+      .icon,
+      img {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+    }
+
+    .input-footer {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 50px;
+      padding: 7px 16px;
+
+      .input {
+        height: 36px;
+        min-height: 0;
+        padding-left: 27px;
+        border-radius: 18px;
+        background-color: #f7f8fa;
+        font-size: 14px;
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+      .no-border {
+        @include hairline-remove(bottom);
+      }
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        margin-top: -6.5px;
+        margin-left: 10px;
+        font-size: 13px;
+      }
+    }
+  }
+}

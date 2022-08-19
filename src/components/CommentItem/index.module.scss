@@ -1,0 +1,96 @@
+.root {
+  display: flex;
+  padding: 5px 0 16px 16px;
+  :global {
+    .avatar {
+      width: 34px;
+      height: 34px;
+      margin-right: 12px;
+
+      img {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .comment-info {
+      flex: 1;
+      padding-right: 16px;
+    }
+
+    .comment-info-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 34px;
+      font-size: 15px;
+      color: #333;
+
+      .name {
+        font-weight: 500;
+      }
+    }
+
+    .thumbs-up {
+      font-size: 14px;
+
+      .icon {
+        margin-left: 8px;
+      }
+    }
+
+    .follow {
+      color: #de644b;
+      font-size: 15px;
+    }
+    .followed {
+      color: #a5a6ab;
+      background-color: #f7f8fa;
+    }
+
+    .comment-content {
+      margin-bottom: 8px;
+      line-height: 1.4;
+      color: #3a3948;
+      font-size: 16px;
+    }
+
+    .comment-footer {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .close {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -7px;
+        font-size: 14px;
+      }
+    }
+
+    .replay {
+      height: 25px;
+      padding: 6px 8px;
+      margin-right: 12px;
+      border-radius: 15px;
+      font-size: 12px;
+      background-color: #f7f8fa;
+
+      .icon {
+        position: relative;
+        top: -1px;
+        width: 11px;
+        height: 10px;
+        margin-left: 6px;
+      }
+    }
+
+    .comment-time {
+      color: #a5a6ab;
+      font-size: 12px;
+    }
+  }
+}

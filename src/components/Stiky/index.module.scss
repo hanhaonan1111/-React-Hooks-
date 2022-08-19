@@ -1,0 +1,15 @@
+.root {
+  width: 100%;
+
+  :global {
+    .sticky-placeholder,
+    .sticky-container {
+      width: 100%;
+    }
+
+    .sticky-container {
+      z-index: 1;
+      background-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import '@scss/hairline.scss';
+
+.root {
+  height: 50px;
+  :global {
+    .tabbar {
+      position: fixed;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      padding: 7px 0 5px;
+      background-color: #f7f8fa;
+      @include hairline(top, #f0f0f0);
+
+      &-item-active {
+        color: #fc6627;
+      }
+
+      &-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .icon {
+          margin-bottom: 3px;
+          font-size: 28px;
+        }
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

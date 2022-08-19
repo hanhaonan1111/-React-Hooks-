@@ -1,0 +1,31 @@
+.root {
+  height: 100%;
+  padding: 8px 0;
+  background-color: #fff;
+
+  :global {
+    .list-item {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+
+      &:active {
+        background-color: #f2f3f5;
+      }
+
+      &:last-child {
+        color: #a5a6ab;
+
+        &::before {
+          content: ' ';
+          display: block;
+          height: 8px;
+          // width: 100%;
+          background-color: #f7f8fa;
+        }
+      }
+    }
+  }
+}

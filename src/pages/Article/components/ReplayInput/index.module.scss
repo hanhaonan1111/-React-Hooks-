@@ -1,0 +1,24 @@
+.root {
+  height: 100%;
+  background-color: #fff;
+
+  :global {
+    .publish {
+      color: #fc6627;
+      font-size: 17px;
+    }
+
+    .input-area {
+      padding: 15px 16px;
+      font-size: 16px;
+
+      &::placeholder {
+        font-size: 16px;
+      }
+
+      .at {
+        color: #969799;
+      }
+    }
+  }
+}

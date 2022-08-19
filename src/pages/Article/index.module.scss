@@ -1,0 +1,239 @@
+@import "@scss/hairline.scss";
+
+.root {
+  height: 100%;
+
+  :global {
+    .root-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .am-icon-ellipsis {
+      color: #323233;
+    }
+
+    .nav-author {
+      display: flex;
+      text-align: left;
+      align-items: center;
+      color: #3a3948;
+      font-size: 15px;
+      img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+      .name {
+        margin: 0 8px;
+        padding-right: 10px;
+        border-right: 1px solid #bfc2cb;
+        line-height: 10px;
+      }
+      .follow {
+        color: #de644b;
+      }
+      .followed {
+        color: #ccc;
+      }
+    }
+
+    .wrapper {
+      height: 621px;
+      overflow-y: auto;
+      background-color: #f7f8fa;
+    }
+
+    .article-wrapper {
+      padding: 0 16px;
+      background-color: #fff;
+    }
+
+    .header {
+      position: relative;
+      padding: 18px 0 12px;
+      @include hairline(bottom, #f0f0f0);
+
+      .title {
+        margin-bottom: 12px;
+        font-size: 23px;
+        color: #333;
+      }
+
+      .info {
+        height: 12px;
+        margin-bottom: 23px;
+        line-height: 12px;
+        color: #a5a6ab;
+        font-size: 11px;
+
+        span {
+          display: inline-block;
+          padding: 0 8px;
+          border-right: 1px solid #bfc2cb;
+
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+
+      .author {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 34px;
+          height: 34px;
+          margin-right: 12px;
+          object-fit: cover;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+
+        .name {
+          color: #333;
+          font-size: 15px;
+        }
+
+        .follow {
+          position: absolute;
+          right: 0;
+          height: 29px;
+          padding: 8px 18px;
+          border-radius: 15px;
+          color: #fff;
+          font-size: 14px;
+          background-color: #fc6627;
+        }
+
+        .followed {
+          color: #a5a6ab;
+          background-color: #f7f8fa;
+        }
+      }
+    }
+
+    .content {
+      width: 100%;
+      padding: 30px 0 25px;
+      line-height: 27px;
+      overflow: hidden;
+      color: #595769;
+      font-size: 16px;
+
+      .content-html {
+        word-break: break-all;
+
+        // 动态内容中的元素
+        pre {
+          font-size: 14px;
+          white-space: pre-wrap;
+
+          code {
+            white-space: pre;
+
+            &.hljs {
+              display: block;
+              padding: 7px;
+              overflow-x: auto;
+            }
+          }
+        }
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .date {
+        padding-top: 25px;
+        text-align: right;
+        font-size: 12px;
+        color: #a5a6ab;
+      }
+    }
+
+    .comment {
+      margin-top: 12px;
+      background-color: #fff;
+
+      .comment-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        font-size: 17px;
+        font-weight: 500;
+        color: #333;
+
+        span {
+          &:last-child {
+            color: #a5a6ab;
+            font-size: 14px;
+            font-weight: normal;
+          }
+        }
+      }
+
+      .comment-list {
+        margin-top: 3px;
+
+        .placeholder {
+          height: 0;
+        }
+
+        .list-loading {
+          line-height: 49px;
+          color: #969799;
+          font-size: 12px;
+          text-align: center;
+        }
+
+        .no-more {
+          line-height: 49px;
+          color: #969799;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
+
+    .drawer {
+      .am-drawer-sidebar {
+        height: 100%;
+      }
+
+      .drawer-sidebar-wrapper {
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+      }
+    }
+
+    .drawer-right {
+      .am-drawer-sidebar {
+        width: 100%;
+      }
+
+      .drawer-sidebar-wrapper {
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 20px 20px 0px 0px;
+      }
+    }
+
+    .drawer-share {
+      .am-drawer-sidebar {
+        box-shadow: none !important;
+      }
+    }
+  }
+}

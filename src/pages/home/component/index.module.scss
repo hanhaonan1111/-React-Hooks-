@@ -1,0 +1,100 @@
+@import "@scss/hairline.scss";
+.root {
+  width: 375px;
+  :global {
+    .channel-header {
+      position: relative;
+      height: 44px;
+      padding: 13px 0;
+
+      .icon {
+        position: absolute;
+        right: 16px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .channel-list-item {
+      position: relative;
+      .close {
+        position: absolute;
+        top: 0px;
+        right: -2px;
+        width: 20px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 12px;
+        height: 15px;
+        color: red;
+      }
+    }
+
+    .channel-content {
+      padding: 0 16px;
+
+      .channel-item {
+        margin-bottom: 16px;
+
+        &.edit {
+          .channel-item-edit {
+            color: #fff;
+            background-color: #de644b;
+          }
+          .icon {
+            display: block;
+          }
+        }
+      }
+
+      .channel-item-header {
+        position: relative;
+        height: 22px;
+        line-height: 22px;
+        margin-bottom: 22px;
+
+        .channel-item-title {
+          margin-right: 10px;
+          font-size: 17px;
+          color: #333;
+          font-weight: 500;
+        }
+
+        .channel-item-title-extra {
+          font-size: 12px;
+          color: #a5a6ab;
+        }
+
+        .channel-item-edit {
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          width: 52px;
+          height: 22px;
+          line-height: 20px;
+          border: 1px solid #de644b;
+          border-radius: 12px;
+          color: #de644b;
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+
+      .channel-list {
+        &-item {
+          position: relative;
+          display: inline-block;
+          padding: 11px 25px;
+          margin-right: 13px;
+          margin-bottom: 16px;
+          border-radius: 18px;
+          color: #3a3948;
+          background-color: #f7f8fa;
+        }
+
+        &-item.selected {
+          color: #fc6627;
+        }
+      }
+    }
+  }
+}

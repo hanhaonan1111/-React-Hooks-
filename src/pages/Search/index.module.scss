@@ -1,0 +1,124 @@
+@import '@scss/hairline.scss';
+
+.root {
+  :global {
+    .navbar {
+      @include hairline-remove(bottom);
+
+      .search-text {
+        padding-left: 16px;
+        font-size: 16px;
+        color: #323233;
+      }
+    }
+
+    .navbar-search {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      height: 36px;
+      line-height: 24px;
+      padding: 5px 8px 5px 0;
+      border-radius: 18px;
+      font-size: 14px;
+      background-color: #f7f8fa;
+
+      .input-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        input {
+          width: 100%;
+
+          &::placeholder {
+            color: #c8c9cc;
+            font-size: 14px;
+          }
+        }
+
+        .icon-close {
+          box-sizing: initial;
+          width: 16px;
+          height: 16px;
+          padding-left: 10px;
+        }
+      }
+
+      .icon {
+        font-size: 12px;
+      }
+      .icon-search {
+        margin: 0 4px 0 7px;
+      }
+    }
+
+    .history {
+      padding: 0 16px;
+      .history-header {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 16px;
+        padding-bottom: 19px;
+        color: #a5a6ab;
+
+        .icon {
+          font-size: 16px;
+          margin-right: 6px;
+        }
+      }
+
+      .history-list {
+        position: relative;
+        color: #333333;
+        font-size: 16px;
+        @include hairline(bottom, #f0f0f0);
+
+        .history-item {
+          display: inline-block;
+          height: 16px;
+          margin-bottom: 16px;
+        }
+
+        .divider {
+          display: inline-block;
+          height: 16px;
+          width: 1px;
+          margin: 0 16px;
+          vertical-align: middle;
+          background-color: #bfc2cb;
+        }
+      }
+    }
+
+    .search-result {
+      padding: 0 20px;
+      display: none;
+
+      .result-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 44px;
+        padding: 10px 0;
+        font-size: 14px;
+        @include hairline(bottom, #f0f0f0);
+
+        .icon {
+          margin-right: 4px;
+          font-size: 12px;
+        }
+
+        .result-value {
+          span {
+            color: red;
+          }
+        }
+      }
+    }
+    .search-result.show {
+      display: block;
+    }
+  }
+}

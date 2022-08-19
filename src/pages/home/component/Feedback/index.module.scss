@@ -1,0 +1,48 @@
+@import "@scss/hairline.scss";
+
+:global {
+  .more-action-modal {
+    .am-modal-content {
+      padding-top: 0;
+      .am-modal-body {
+        padding-bottom: 0;
+      }
+    }
+
+    .action-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      color: #333;
+      font-size: 16px;
+      @include hairline(bottom, #efefef);
+
+      &:last-child {
+        @include hairline-remove(bottom);
+      }
+
+      .text {
+        flex: 1;
+        text-align: left;
+
+        & + .icon {
+          margin-right: 0;
+          color: #969799;
+          font-size: 16px;
+        }
+      }
+
+      .back-text {
+        flex: 1;
+        margin-left: -28px;
+      }
+
+      .icon {
+        margin-right: 12px;
+        color: #bfc2cb;
+        font-size: 16px;
+      }
+    }
+  }
+}

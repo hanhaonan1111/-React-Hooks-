@@ -1,0 +1,38 @@
+@import '@scss/hairline.scss';
+
+.root {
+  height: 100%;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #fff;
+
+  :global {
+    .reply-wrapper {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .transparent-navbar {
+      background-color: transparent;
+    }
+
+    .origin-comment {
+      position: relative;
+      padding-top: 7px;
+      @include hairline(bottom, #efefef);
+    }
+
+    .reply-list {
+      flex: 1;
+      overflow-y: scroll;
+
+      .reply-header {
+        padding: 16px;
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+  }
+}

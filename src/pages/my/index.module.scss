@@ -1,0 +1,162 @@
+@import '@scss/hairline.scss';
+.root {
+  height:100%;
+  background-color: #f8f8f8;
+
+  :global {
+    
+    .profile {
+      height: 290px;
+      padding: 0 15px;
+      border-bottom-left-radius: 500px 120px;
+      border-bottom-right-radius: 500px 120px;
+      background: linear-gradient(318deg, #b2b5db 2%, #565482 85%, #494675 97%);
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      padding: 40px 0 15px;
+
+      .user-name {
+        flex: 1;
+        margin-left: 18px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #fff;
+      }
+
+      a {
+        line-height: 16px;
+        color: #fff;
+        font-size: 12px;
+
+        &:visited {
+          color: #fff;
+        }
+      }
+
+      .icon {
+        width: 9px;
+        height: 16px;
+        vertical-align: middle;
+      }
+    }
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(255, 255, 255, 0.16);
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .read-info {
+      display: flex;
+      align-items: center;
+      width: 141px;
+      height: 30px;
+      padding: 5px;
+      border-radius: 15px;
+      font-size: 12px;
+      color: #f7f8fa;
+      background: linear-gradient(319deg, #585089 0%, #2c2a6b 98%);
+
+      .icon {
+        margin-right: 5px;
+        font-size: 20px;
+      }
+
+      span {
+        display: inline-block;
+        margin: 0 3px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffbc3d;
+      }
+    }
+
+    .count-list {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0 15px 0;
+
+      .count-item {
+        flex: 1;
+        text-align: center;
+        font-size: 13px;
+        color: #fff;
+
+        p {
+          &:first-child {
+            height: 14px;
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+
+    .user-links {
+      display: flex;
+
+      padding: 20px 0;
+      font-size: 12px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+      color: #333;
+
+      .link-item {
+        flex: 1;
+      }
+
+      .icon {
+        margin-bottom: 11px;
+        font-size: 23px;
+      }
+    }
+    .Logout{
+      text-align: center;
+      color: red!important;  
+      @include hairline(top, #ccc);
+      background-color: #fff;
+      margin: 20px 18px;
+      padding: 15px 0;
+      border-radius: 5px;
+    }
+    .more-service {
+      // height: 120px;
+      margin: 11px 16px 0 16px;
+      border-radius: 10px;
+      background-color: #fff;
+
+      h3 {
+        padding: 15px;
+        font-size: 17px;
+        color: #333;
+      }
+
+      .service-list {
+        display: flex;
+      }
+
+      .service-item {
+        width: 25%;
+        padding-bottom: 20px;
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .icon {
+        margin-bottom: 11px;
+        font-size: 22px;
+      }
+    }
+  }
+}

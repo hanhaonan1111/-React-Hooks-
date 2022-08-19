@@ -1,0 +1,100 @@
+@import "@scss/hairline.scss";
+
+.root {
+  :global {
+    .none {
+      display: none;
+    }
+    .aa {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: fixed;
+      width: 100px;
+      height: 45px;
+      z-index: 1;
+      right: 0;
+      line-height: 45px;
+      top: 0;
+      padding: 5px 10px;
+      background-color: rgb(255, 255, 255);
+      font-size: 21px;
+      .more {
+        font-size: 30px;
+      }
+    }
+    .am-drawer-sidebar {
+      background-color: white !important;
+    }
+    // .am-tabs-default-bar-nextpage {
+    //   background: transparent;
+    // }
+    // .am-tabs-tab-bar-wrap {
+    //   padding-right: 86px;
+    //   box-shadow: 0 2px 2px #f0f0f0;
+    // }
+    // .am-tabs-default-bar-tab {
+    //   padding: 9px;
+    //   font-size: 15px !important;
+    //   // width: auto !important;
+    // }
+    // .am-tabs-default-bar-tab-active {
+    //   font-size: 18px !important;
+    // }
+
+    // .am-tabs-default-bar-underline {
+    //   border: 0;
+    //   display: flex;
+    //   justify-content: center;
+    //   &::after {
+    //     content: '';
+    //     width: 30px;
+    //     margin-left: 13.9px;
+    //     height: 4px;
+    //     display: block;
+    //     background: #000;
+    //   }
+    // }
+
+    .tabs-opration {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      width: 86px;
+      height: 44px;
+      padding: 0 14px;
+      background: #fff;
+      @include hairline(bottom, #efefef);
+
+      .icon {
+        color: #9ea1ae;
+        font-size: 18px;
+
+        &:first-child {
+          margin-right: 21px;
+        }
+      }
+
+      &::before {
+        content: "";
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        left: -20px;
+        top: 0;
+        background: linear-gradient(to left, #ffffff, rgba(255, 255, 255, 0.3));
+      }
+    }
+
+    .my-drawer {
+      .am-drawer-sidebar {
+        background-color: #fff;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+  }
+}

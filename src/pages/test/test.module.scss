@@ -1,0 +1,22 @@
+.root {
+  height: 4000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  :global {
+    .img {
+      width: 300px;
+      height: 375px;
+      margin-top: 2000px;
+    }
+    .show {
+      display: block;
+      transition: all 0.5;
+    }
+    .none {
+      display: none;
+      background-color: white;
+      transition: all 0.5;
+    }
+  }
+}
